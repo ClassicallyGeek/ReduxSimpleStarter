@@ -20,23 +20,22 @@ class App extends Component {
       videos: [],
       selectedVideo: null
     };
-
-    YTSearch({
-      key: API_KEY,
-      term: 'kittens'
-    }, videos => this.setState({
-        videos: videos,
-        selectedVideo: videos[0]
-      })
-   );
+    this.videoSearch('puppies');
   }
 
-
+  videoSearch(term) {
+    YTSearch({ key: API_KEY, term: term},
+      (videos) => {this.setState({
+        videos: videos,
+        selectedVideo: videos[0]
+      });
+    });
+  }
    // html stuff is JSX
   render() {
     return ( // Multi-line JSX with ()
       <div>
-        <SearchBar />
+        <SearchBar onSearchTermChange = { term => this.videoSearch(term)}/>
         <VideoDetail video={this.state.selectedVideo}/>
         <VideoList
           videos={this.state.videos}
