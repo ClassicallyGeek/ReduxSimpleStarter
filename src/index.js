@@ -5,6 +5,7 @@ import YTSearch from 'youtube-api-search';
 // Path references are needed to import our code.
 import SearchBar from './components/search_bar';
 import VideoList from './components/video_list';
+import VideoDetail from './components/video_detail';
 
 const API_KEY = 'AIzaSyCmLl0MlFATk2uUbUOgQypJ6O9fiDDgVUw';
 
@@ -19,7 +20,7 @@ class App extends Component {
 
     YTSearch({
       key: API_KEY,
-      term: 'puppies'
+      term: 'kittens'
     }, videos => this.setState({ videos }) );
 
   }
@@ -28,6 +29,7 @@ class App extends Component {
     return ( // Multi-line JSX with ()
       <div>
         <SearchBar />
+        <VideoDetail video={this.state.videos[0]}/>
         <VideoList videos={this.state.videos}/>
       </div>
     );
