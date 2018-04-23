@@ -1,25 +1,16 @@
 # ReduxSimpleStarter
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Class Project from Udemy React/Redux course 
+https://www.udemy.com/react-redux/
 
-### Getting Started
+# YouTube (React-only application)
 
-There are two methods for getting started with this repo.
+* Functional Components vs Class Components
 
-#### Familiar with Git?
-Checkout this repo, install dependencies, then start the gulp process with the following:
+* Import Statements/Export Statements
 
-```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
-> npm install
-> npm start
-```
+* Callbacks 
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
+* Component-level State and Updating State / Props
 
-```
-> npm install
-> npm start
-```
+* ES6 fat arrow functions, string interpolation
